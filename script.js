@@ -23,7 +23,7 @@ function showMovies(movies) {
     movies.forEach((movie) => {
         var { title, poster_path, vote_average, overview} = movie
 
-        vote_average = vote_average.toFixed(1)
+        vote_average = vote_average.toFixed(1);
         const movieEl = document.createElement('div')
         movieEl.classList.add('movie')
 

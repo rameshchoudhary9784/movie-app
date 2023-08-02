@@ -21,8 +21,9 @@ function showMovies(movies) {
     main.innerHTML = '';
 
     movies.forEach((movie) => {
-        const { title, poster_path, vote_average, overview} = movie
+        var { title, poster_path, vote_average, overview} = movie
 
+        vote_average = vote_average.toFixed(1);
         const movieEl = document.createElement('div')
         movieEl.classList.add('movie')
 
@@ -43,7 +44,7 @@ function showMovies(movies) {
 }
 
 function getClassByRate(vote) {
-    if(vote >= 8) {
+    if(vote >= 7) {
         return 'green'
     }else if(vote >= 5) {
         return 'orange'
